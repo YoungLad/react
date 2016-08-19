@@ -8,7 +8,12 @@
     <body>
     <div id="react-container"></div>
     <script type="text/babel">
-
+        var MyComponent = React.createClass({
+            render: function() {
+                return <div>My React Component</div>;
+            }
+        });
+        React.render(<MyComponent />, document.getElementByID('react-container'));
     </script>
     </body>
 </html>
