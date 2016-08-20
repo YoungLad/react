@@ -45,7 +45,18 @@ var Note = React.createClass({
     }
 });
 
+var Board = React.createClass({
+    
+    propTypes: {
+        count: function(props, propName){
+            if (typeof props[propName]) !== "number"
+        }
+    }
+    render: function(){
+        return <div className="board"></div>
+    }
 
+})
 
 React.render(<Note>Hello World</Note>, 
     document.getElementById('react-container'));
